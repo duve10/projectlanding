@@ -1,0 +1,290 @@
+.p1 {
+    font-size: 1.8rem;
+    font-weight: $regular;
+    margin-top: 7.8rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: #7A7A7A;
+}
+.p2 {
+    font-size: 3.5rem;
+    font-weight: $negrita;
+    margin-top: 1.0rem;
+    margin-bottom: 4.6rem;
+    color: #7756D7;
+}
+.panel {
+    height: 116.5rem;
+    width: 70%;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100vw;
+    border-radius: 1.2rem;
+    background-color: #F4F5F5;
+
+    @include tablet {
+        width: 100%;
+        padding-top: 1rem;
+        margin-left: 0;
+        max-width:none;
+    }
+
+}
+
+.panel h2 {
+    font-size: 3rem;
+    font-weight: $negrita;
+    color: #7756D7;
+    margin-bottom: 1.3rem;
+    margin-top: 4.4rem;
+}
+
+
+.panel .img-panel {
+    display: flex;
+    max-width: 22.6rem;
+    max-height: 24.5rem;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3.2rem;
+}
+
+.precio {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 6.4rem;
+    margin-bottom: .8rem;
+}
+
+
+.panel .precio .price {
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: $negrita;
+    height: 6.4rem;
+    margin: 0;
+
+}
+
+
+.precio p {
+    font-size: 2.6rem;
+    color: #7756D7;
+    height: auto;
+    margin: 0;
+    display: inline;
+    font-weight: $mediana;
+}
+
+.precio p:first-child  {
+    align-self: flex-start;
+    margin: 0;
+    display: inline-flex;
+    align-items: flex-start;
+    margin-right: 5px;
+}
+
+.contenedor-panel {
+    display: none   ;
+    
+    @include tablet {
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+
+.contenedor-panel,
+.contenedor-panel2 {
+    background-color: white;
+}
+
+.paneles {
+    max-width: 100rem;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.6rem;
+    align-content: center;
+    
+}
+
+.p-panel {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: $mediana;
+    color: #7A7A7A;
+    margin: 0;
+    height: 2.4rem;
+    margin-bottom: 4.4rem;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-height: 47.7rem;
+    margin: 0;
+}
+
+.informacion ul li {
+    list-style:none;
+    font-size: 1.6rem;
+    font-weight: $mediana;
+    color: #7A7A7A;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    img {
+        height: 2rem;
+        width: 2rem;
+        margin-right:1.9rem;
+    }
+
+}
+
+.informacion ul {
+   padding: 0;
+   margin: 0;
+}
+
+.btn-con {
+    background: linear-gradient(to left, #5eb2fb 30% , #6638d2 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20.3rem;
+    height: 5.07rem;
+    margin: auto;
+    
+    border-radius: 2.9rem;
+    position: relative;
+    bottom: -1.5rem;
+
+    &:hover {
+        animation: fondo .1s ease forwards;
+          
+    }
+    
+
+
+    img {
+        height: 1.6rem;
+        width: 1.6rem;
+        display: inline;
+        margin-right: 1rem;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: $mediana;
+        color: white;
+    }
+}
+
+@keyframes fondo {
+    0% {
+        background: linear-gradient(to left, #5eb2fb 30% , #6638d2 );
+    } 
+
+    25%{
+        background: linear-gradient(to left, #5eb2fb 20% , #6638d2 );
+    }
+   50%{
+        background: linear-gradient(to left, #5eb2fb 10% , #6638d2 );
+    }
+    75%{
+        background: linear-gradient(to left, #5eb2fb 5% , #6638d2 );
+    }
+    100% {
+        background: linear-gradient(to left, #6638d2 0.5px , #6638d2 );
+    }
+}
+
+
+
+
+
+/** Pnales slider*/
+.contenedor-panel2 {
+    overflow: hidden;
+    background-color: white;
+    @include tablet {
+        display: none;
+    }
+}
+.paneles1 {
+
+    display: inline-flex;
+    overflow: hidden;
+    transform:  translateX(0);
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+}
+
+// .panel1,
+// .panel2,
+// .panel3 {
+//     width: 100vw;
+//     user-select: none;
+
+
+// }
+
+.slidePanel {
+    width: 100vw;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.grabbing .slider img {
+    transform: scale(0.9);
+}
+
+
+/** agregar 10px de x a panel**/
+.paneles1 {
+    transform: translateX(10px);
+}
+
+/** Flechas **/
+
+.allPanell {
+    position: relative;
+}
+
+.derecha,
+.izquierda {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    height: 50px;
+    color: #7756D7;
+    font-weight: $negrita;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.derecha {
+    margin-right: 2.5rem;
+    font-size: 3rem;
+     
+    right: 0;
+}
+
+.izquierda {
+    margin-left: 2.5rem;
+    font-size: 3rem;    
+}
+
+.desaparecer {
+    display: none;
+}

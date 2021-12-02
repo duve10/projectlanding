@@ -1,0 +1,89 @@
+.tituloCaracteristica {
+    font-size: 2.6rem;
+    font-weight: $regular;
+    color: #7756D7;
+    max-width: 39.4rem;
+    margin: auto;
+    line-height: 4.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+
+    @include tablet {
+        font-size: 3rem;
+        margin-top: 5.3rem;
+    margin-bottom: 6.2rem;
+    }
+}
+
+
+.section-servicios {
+    background: linear-gradient(rgba(0, 185, 255, 1) ,rgba(110, 90, 216, 1));
+    height: 100%;
+  
+    padding-bottom: 4rem;
+    @include tablet {
+        height: 53.2rem;
+        padding-bottom: 0;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        margin: 0;
+        color: white;
+        font-weight: $mediana;
+        margin-top: 3rem;
+        width: 70%;
+
+        @include tablet {
+            font-size: 3.8rem;
+            margin-top: 0;
+            width: auto;
+        }
+
+    }
+
+    .servicios {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+.servicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    img {
+        margin: auto;
+        // transform:translateY();
+    }
+
+    p {
+        text-align: center;
+ 
+        color: white;
+        font-size: 1.6rem;
+        width: 24rem;
+        line-height: 2.6rem;
+        margin: auto auto 3rem auto;
+    
+
+        
+        @include tablet {
+            margin: auto;
+            
+        }
+    }
+}
+
+
+

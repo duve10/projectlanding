@@ -1,0 +1,255 @@
+footer {
+    background-color: #222222;
+    height: 100%;
+    padding: 6rem 1.8rem;
+    color: white;
+
+    @include tablet {
+        height: 404px;
+        max-height: 404px;
+        padding: 6rem 0 4rem 5.2rem;
+    }
+
+    h3 {
+        text-align: left;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: $mediana;
+        margin-bottom: 2.2.3rem;
+
+        @include tablet {
+            margin-bottom: 1rem;
+        }
+
+        &:before {
+            content: '';
+            width: 3rem;
+            height: 2px;
+            background-color: red;
+        }
+    }
+
+    
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        font-size: 1.4rem;
+        font-weight: $superDelgada;
+        line-height: 4rem;
+    }
+    
+}
+
+.footer1 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include tablet {
+        grid-template-columns: 3fr 1fr 1fr 2fr;
+    }
+    
+}
+
+.footer2 p{
+    margin: 3.6rem 0 0 0;
+    font-size: .9rem;
+    color: whitesmoke;
+    font-weight: $superDelgada;
+
+    @include tablet {
+      
+        font-size: 1.4rem;
+        margin: 0;
+    }
+}
+
+.footerall {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.linea {
+    display: none;
+
+    @include tablet {
+        display: block;
+        content: '';
+        height: .2rem;
+        width: 35rem;
+        background-color: white;
+        margin-top: 2rem;
+    }
+}
+
+.iconos {
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}
+
+.iconos ul {
+    display: flex;
+    margin-top: 1rem;
+    
+}
+
+.iconos ul li a {
+    color: white;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+
+    &:hover {
+        zoom: 100%;
+        font-size: 2rem;
+    }
+}
+
+.foot li {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.foot2 {
+    margin-left: 0;
+
+    @include tablet {
+        margin-left: -3rem;
+    }
+}
+
+.btnFinal {
+    border: 1px solid white;
+    border-radius: 2.9rem;
+    color: white;
+    padding: .8rem 3rem;
+
+    &:hover {
+        padding: 1.2rem 3.5rem;
+        margin-left: -.5rem;
+    }
+}
+
+.iconos2 {
+
+    display: inline;
+    margin: auto;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.iconos2 ul {
+    display: flex;
+    margin-top: 2rem;
+    
+    
+    li {
+        font-size: 4rem;
+        margin: 0 2rem;
+     
+        a {
+            color: white;
+        }
+    }
+}
+
+
+
+
+/** SUMAS **/
+
+.subTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sumas1, 
+.sumas2, 
+.sumas3, 
+.sumas4 {
+    height: 1.8rem;
+    width: 1.8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .parado {
+        width: 3px;
+        height: 70%;
+        position: absolute;
+        background-color: white;
+        display: block;
+    }
+
+    .echado {
+        width: 70%;
+        height: 3px;
+        position: absolute;
+        background-color: white;
+        display: block;
+    }
+
+
+    @include tablet {
+        display: none;
+    }
+
+}
+
+
+/** EQUIS */
+.sumas1 .parado, 
+.sumas2 .parado, 
+.sumas3 .parado, 
+.sumas4 .parado {
+    animation: suma 1s forwards;
+}
+
+.sumas1.equis .parado, 
+.sumas2.equis .parado, 
+.sumas3.equis .parado,
+.sumas4.equis .parado {
+
+   
+    animation: equis 1s forwards;
+   
+}
+
+@keyframes equis {
+    50%,100% {
+        height: 0%;
+    }
+}
+
+@keyframes suma {
+    0% {
+        height: 0%;
+    }
+
+    50%,100% {
+        height: 70%;
+    }
+}
+
+
+
+
+/** MOSTRAR **/
+
+.showLi li {
+    display: block;
+}

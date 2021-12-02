@@ -1,0 +1,424 @@
+.contiene {
+    max-width: 136.6rem;
+    margin: auto;
+}
+
+
+
+.section-caracteristicas {
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 3rem;
+    }
+    main {
+        height: 100%;
+       
+    }
+    
+    .administrables {
+        margin: auto;
+        max-width: 100%;
+        max-width: 33.8rem;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        height: 50.1rem;
+        justify-content: space-between;
+        background: linear-gradient(#FC7E1F,#FC3287);
+        border-radius: 1.5rem;
+
+        @include tablet {
+            max-width: 126.2rem;
+            width: 100%;
+            height: 52.6rem;
+            flex-direction: row;
+        }
+
+        h3{
+            margin: 0;
+            width: 70%;
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: $negrita;
+
+            @include tablet {
+                width: 100%;
+                font-size: 4.8rem;
+            }
+        }
+    }
+}
+
+.administrables-parte1 {
+    // margin: 3.5rem 0 8.7rem 4.9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+
+    @include tablet {
+        width: 40%;
+        padding: 3.5rem 0 9.1rem 4.9rem;
+    }
+
+    p {
+        color: white;
+        &:first-child {
+            font-weight: $regular;
+            font-size: 1.6rem;
+
+            @include tablet {
+                font-size: 2rem;
+            }
+        }
+
+        &:last-child {
+            font-size: 1.4rem;
+            font-weight: $delgada;
+            line-height: 2.6rem;
+
+            @include tablet {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
+.administrables-parte2 {
+    // margin: 3.5rem 0 8.7rem 4.9rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    @include tablet {
+        width: 50%;
+    }
+
+    .computador1 {
+        display: none;
+        height: 95%;
+        transform: translateY(15px);
+
+        @include tablet {
+            display: block;
+        }
+    }
+
+    .computador2 {
+        display: block;
+        width: 100%;
+        transform: translateY(-115px);
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+
+
+.software-diseno {
+    display: flex;
+    flex-direction: column;
+    max-width: 126.2rem;
+    margin: auto;
+    margin-top: 2rem;
+    
+
+    @include tablet {
+        flex-direction: row;
+        margin-top: 5.2rem;
+        gap: 5.2rem;
+    }
+
+    .software {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 33.8rem;
+        min-height: 23.4rem;
+        color: white;
+        background: linear-gradient(#FC3287,#7756D7);
+        border-radius: 1.5rem;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin: 0;
+            width: 100%;
+            max-width: 60.5rem;
+            min-height: 34.1rem;
+            margin-bottom: 0;
+        }
+
+        h3{
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: $regular;
+            margin: 0;
+            margin-left: 2rem;
+            margin-top: 2rem;
+
+            @include tablet {
+                font-size: 1.8rem;
+                margin: 0;
+                margin-top: 3.5rem;
+                margin-left: 5.9009rem
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: $delgada;
+            line-height: 2.4rem;
+            color: white;
+            max-width: 48.7rem;
+            margin: 0;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            @include tablet {
+                margin: auto;
+            }
+
+            @include tablet {
+                line-height: 2.6rem;
+            }
+        }
+    }
+
+    .diseno {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height: 59rem;
+        max-width: 33.8rem;
+        background: linear-gradient(#FC3287,#7756D7);
+        border-radius: 1.5rem;
+        margin: auto;
+
+        @include tablet {
+            margin: 0;
+            flex-direction: row;
+            max-width: 60.5rem;
+            height: auto;
+        }
+
+        h3 {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: $regular;
+            margin: 0;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            text-align: left;
+
+            @include tablet {
+                margin-left: 5.9009rem;
+                margin-top: 3.5rem;
+                font-size: 1.8rem;
+            }
+            
+        }
+
+        p  {
+            color: white;
+            font-size: 1.2rem;
+            line-height: 2.4rem;
+            font-weight: $delgada;
+            max-width: 100%;
+            margin-left: 2rem;
+            
+
+            @include tablet {
+                line-height: 2.6rem;
+                font-size: 1.4rem;
+                margin: auto;
+                max-width: 24.8rem;
+            }
+        }
+
+        .responsive {
+            display: flex;
+        }
+    }
+}
+
+.programs {
+    display: flex;
+    margin: auto;
+    gap: 1.5rem;
+
+    @include tablet {
+        gap: 3.6rem;
+    }
+
+    img {
+        width: 4.1rem;
+        height: 4.1rem;
+
+        @include tablet {
+            width: 7.4rem;
+            height: 7.4rem;
+        }
+    }
+}
+
+.inforDiseno {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablet {
+        width: 60%;
+    }
+
+}
+
+.responsive {
+    margin: auto;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @include tablet {
+        gap: 4.1rem;
+        margin-top: auto;
+    }
+
+
+    img:first-child {
+        width: 3rem;
+        height: 3rem;
+
+        @include tablet {
+            width: 5rem;
+            height: 5rem;
+
+        }
+    }
+
+    img:nth-child(2){
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+    img:last-child {
+        width: 6rem;
+        height: 5.3rem;
+    }
+}
+
+.responsive div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: $delgada;
+    }
+}
+
+.mobil {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 65%;
+
+    @include tablet {
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+    img {
+        height: 95%;
+        width: 90%;
+        margin: auto;
+
+        @include tablet {
+            width: auto;
+            margin: 0;
+        }
+    }
+}
+
+
+/** SECTION 3 **/
+
+.paneles-3 {
+    width: 100%;
+    max-width: 126.2rem;
+    margin: auto;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    @include tablet {
+        flex-direction: row;
+  
+        margin-top: 6.2rem;
+    }
+    
+
+    .panel1 {
+      max-width: 33.8rem;  
+      height: 15.4rem;
+      background: linear-gradient(to top,#00B9FF,#6E5AD8);
+      border-radius: 1.5rem;
+      margin: auto;
+      margin-bottom: 2rem;
+
+      @include tablet {
+        max-width: 38.6rem;
+        height: 22.3rem;
+       
+        margin: 0;
+      }
+      h3,p {
+          margin: 0;
+          color: white;
+      }
+      h3 {
+          font-size: 1.6rem;
+          font-weight: $regular;
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+          margin-top: 3.5rem;
+          text-align: left;
+          
+          @include tablet {
+              font-size: 2rem;
+              text-align: center;
+              margin-left: 0;
+              margin-bottom: 4.6rem;
+          }
+      }
+
+      p {
+          font-size: 1.4rem;
+          font-weight: $delgada;
+          line-height: 2.6rem;
+          margin:0;
+          margin-left: 2rem;
+
+          @include tablet {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+              margin:0 4.5rem 0 4.5rem;
+          }
+
+      }
+    }
+}

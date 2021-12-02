@@ -1,0 +1,35 @@
+
+.error {
+    margin: 0;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.red {
+    color: red;
+}
+
+
+
+
+.checkError,
+.vacioError {
+    margin: 0 auto 2rem auto;
+}
+
+
+
+.enviado {
+    display: none;
+    color: #01e027;
+    font-weight: $negrita;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mostrar-error,
+.mostrar-envio,
+.mostrar-vacio {
+    display: block;
+}

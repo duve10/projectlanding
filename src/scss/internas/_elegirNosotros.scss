@@ -1,0 +1,62 @@
+.section3 {
+
+    margin-bottom: 7rem;
+    h2 {
+        color: #7756D7;
+        font-size: 2.6rem;
+        font-weight: $mediana;
+
+        @include tablet {
+            font-size: 3.8rem;
+        }
+    }
+}
+.choose {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    margin: 0 8rem;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        column-gap: 2rem;
+        margin: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #7A7A7A;
+
+        p {
+            text-align: center;
+            color: #7A7A7A;
+            font-size: 1.4rem;
+            font-weight: $delgada;
+            line-height: 2.6rem;
+
+            @include tablet {
+                font-size: 1.6rem;
+            }
+        }
+
+        h3 {
+            margin: 2.2rem 0; 
+            font-size: 2.2rem;
+            font-weight: $mediana;
+
+            @include tablet {
+                font-size: 3rem;
+            }
+        }
+    }
+
+
+    img {
+        width: 8.3rem;
+        height: 7.3rem;
+    }
+}

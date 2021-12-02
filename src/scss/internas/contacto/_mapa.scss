@@ -1,0 +1,80 @@
+.ubicar {
+    display: none;
+    border-top: 3px solid #FBAB43;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.ubicacion {
+    max-width: 136.6rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 68.3rem;
+    
+
+    h2 {
+        color: #FBAB43;
+        font-size: 3.8rem;
+        font-weight: $negrita;
+        text-align: left;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: $regular;
+        color: #7A7A7A;
+    }
+
+}
+
+.mapa {
+    width: 65%;
+}
+
+.info-ubicacion {
+    margin-left: 2rem;
+}
+
+.ubi-raya {
+    content: '';
+    height: 3px;
+    width: 30%;
+    background-color: #FBAB43;
+}
+
+.detalle-mapa {
+    display: flex;
+    flex-direction: column;
+    
+    .imagenUbi:first-child img {
+        height: 2.5rem;
+        width: 3.2rem;
+    }
+
+    .imagenUbi:nth-child(2) img {
+        height: 1.9rem;
+        width: 3.3rem;
+    }
+
+    .imagenUbi:last-child img {
+        height: 3rem;
+        width: 3.1rem;
+    }
+
+    .imagenUbi {
+        display: flex;
+        margin-top: 3rem;        
+
+        p {
+            margin-left: 2rem;
+        }
+    }
+
+    .mapa-info p:first-child{
+        color: #FBAB43;
+        margin-top: 0 ;
+    }
+}

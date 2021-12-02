@@ -1,0 +1,30 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+
+/*** CSS manual **/
+@import 'layout/header';
+@import 'layout/slider';
+@import 'layout/whats';
+@import 'layout/paneles';
+@import 'layout/beneficios';
+@import 'layout/footer';
+
+/** Nosotros */
+@import 'internas/headerNosotros';
+@import 'internas/elegirNosotros';
+@import 'internas/misionVision';
+@import 'internas/personasNosotros';
+
+/**Servicios**/
+@import 'internas/headerServicios';
+@import 'internas/administrablesServicios';
+@import 'internas/proyectosServicios';
+
+/** contacto **/
+@import 'internas/contacto/comunicate';
+@import 'internas/contacto/mapa';
+@import 'internas/contacto/validacion';
+

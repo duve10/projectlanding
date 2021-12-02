@@ -1,0 +1,379 @@
+.barra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem 0;
+    
+    // padding-top: 2rem ;
+    // height: 9.1rem;
+    
+    // backdrop-filter: saturate(180%) blur(20px);
+    // background-color: rgba(255,255,255,0.72);
+    // position: fixed;
+    // z-index: 120;
+    
+
+
+    .img-logo img {
+        width: 16.4rem;
+        // height: 3.1rem;
+        @include tablet {
+            width: 100%
+        }
+    }
+    @include tablet {
+        
+        flex-direction: row;
+        padding-top: 0;
+        height: 13.3rem;
+        padding: 0rem 5rem;  
+    }
+}
+
+.div-logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem 0 1.5rem;
+    align-items: center;
+    width: 100%;
+    
+
+}
+
+@media (min-width: $tablet) {
+    .div-logo {
+        width: 25.6rem;
+        height: 4.9rem;
+    }
+}
+
+
+
+/** ESCONDO LA NAVEGACION EN MOBIL **/
+.navegacion {
+    display: none;
+    flex-direction: column;
+    
+    @include tablet {
+        display: block;
+    }
+}
+
+
+.navegacion a {
+    padding: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: $regular;
+    color: #000;
+
+    & i {
+        font-size: 1.4rem;
+    }
+
+    
+}
+
+
+@media (min-width:$tablet) {
+    .navegacion a {
+        padding-left: 2.5rem;
+     
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    
+}
+
+.barra.active {
+    background-color: rgba(255, 255, 255,0.8);
+    position: fixed;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0,0,0,0.16);
+    z-index: 2;
+
+    .navegacion a {
+        padding-left: 2.5rem;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: $regular;   
+    }
+
+
+}
+
+/** menu hamburguesa */
+// .menu-toggle {
+    
+
+//     cursor: pointer;
+//     transition: .3s ease-out;
+
+//     @include tablet {
+//         display: none;
+//     }
+
+//     svg {
+//         font-size: 50rem;
+//     }
+// }
+
+.hamburguer {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.hamburguer .button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 1.8rem;
+    height: 1.45rem;
+    // z-index: 300;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    outline: none;
+
+    
+}
+
+.hamburguer .button span {
+    border-radius: 5px;
+    background-color: #FBAB43;
+    display: block;
+    width: 15px;
+    // margin: 5px 15px;
+    height: 2px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    &:first-child {
+        margin-bottom: 5px;
+    }
+
+    &:last-child {
+        margin-top: 5px;
+    }
+}
+
+.hamburguer .button span:nth-child(2) {
+    width: 60%;
+}
+
+
+.hamburguer .button.open .top-line {
+    animation-name: top-line-animation;
+}
+.hamburguer .button.open .middle-line {
+    animation-name: middle-line-animation;
+}
+.hamburguer .button.open .botton-line {
+    animation-name: bottom-line-animation;
+}
+
+.hamburguer .button .top-line {
+    animation-name: top-line-animation-close;
+}
+.hamburguer .button .middle-line {
+    animation-name: middle-line-animation-close;
+}
+.hamburguer .button .botton-line {
+    animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+
+    50%, 100% {
+        
+        transform: translateY(7px) rotate(-45deg);
+    }
+}
+
+@keyframes bottom-line-animation {
+
+    50%, 100% {
+       
+        transform: translateY(-7px) rotate(45deg);
+    }
+}
+
+@keyframes middle-line-animation {
+
+    20%, 100% {
+        
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes top-line-animation-close {
+
+  0% {
+        
+        transform: translateY(7px) rotate(-45deg);
+    }
+
+    50%, 100% {
+       
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+
+@keyframes middle-line-animation-close {
+
+    0% {
+       
+        width: 0;
+        opacity: 0;
+    }
+
+    20%, 100% {
+        
+        
+        opacity: 1;
+    }
+}
+
+
+@keyframes bottom-line-animation-close {
+
+    0% {
+       
+        transform: translateY(-7px) rotate(45deg);
+    }
+
+    50%, 100% {
+        
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+/** BARRA RESPONSIVE **/
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    background-color: #FBAB43;
+    margin-top: 1.5rem;
+    padding-top: 4.7rem;
+    overflow-y: auto;
+    
+    a {
+        margin-bottom: 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: $regular;
+    }
+    
+}
+
+
+/** quitar scroll */
+.scroll {
+     overflow-x:scroll;
+     overflow-y:hidden;
+}
+
+
+/** INFO -MENU **/
+.info-menu {
+    display: none;
+}
+
+.menu .info-menu {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 3.8rem;
+    
+    
+    p {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: $delgada   ;
+    }
+
+    p:nth-child(2), 
+    p:nth-child(5) {
+        font-weight: $regular;
+    }
+
+    .raya-menu {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #CDBCFF;
+
+    }
+
+    .wsp-menu{
+        margin: auto;
+        display: flex;
+        margin-top: 4.2rem;
+
+     
+
+        a {
+            margin: auto;
+            display: inline-block;
+            background-color: #00CF29;
+            border-radius: 2.9rem;
+            padding: 1rem 4rem;
+        }
+  
+    }
+
+
+}
+
+.menu .info-menu {
+    .iconos-menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 4rem;
+
+        li {
+            list-style: none;
+
+            a {
+                padding: 0;
+                margin: 0;
+                display: inline;
+                margin-left: 1rem;
+            }
+
+            i {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+/** ocultar circulos */
+.display-none {
+    display: none!important;
+}

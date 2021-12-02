@@ -1,0 +1,311 @@
+.web.contenedor{
+    width: 100%;
+
+    @include tablet {
+        width: 95%;
+    }
+}
+.fondo {
+    background-image: url(/build/img/fondo_nosotros.webp);
+    background-size: cover;
+    background-position: center;
+    height: 27.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    h1 {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: $regular;
+        margin-bottom: 2.5rem;
+        color: white;
+
+        @include tablet {
+            font-size: 1.8rem;
+        }
+
+    }
+
+    p {
+        margin: 2rem auto 0 auto;
+        text-align: center;
+        font-size: 1.8rem;
+        color: white;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+    }
+}
+
+.texto {
+    max-width: 318px;
+}
+
+.raya {
+   content: '';
+   margin-top: 2.5rem;
+   width: 5rem;
+   height: 2px;
+   background-color: white;
+   margin: auto;
+}
+
+/** Section 2 **/
+
+.section2 {
+    background-color: #F4F5F5;
+    border-bottom: none;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        border-bottom: 5px solid #7756D7;
+    }
+    
+}
+.web {
+    display: block;
+    height: 100%;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+ 
+}
+
+.director {
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    z-index: 50;
+
+    @include tablet {
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+    
+    p {
+        margin: 0 1rem;
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: $delgada;
+        color: #7A7A7A;
+
+        @include tablet {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include tablet {
+            display: block;
+            
+        }
+    }
+}
+
+.lineaVertical {
+    height: 3.6rem;
+    width: .3rem;
+    background-color: #7756D7;
+}
+
+.web1,
+.web2 {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+
+    @include tablet {
+        flex-direction: row;
+    }
+    
+    .imagen {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        
+        img {
+            max-width: 120%;
+            max-height: 90%;
+            margin-top: 2rem;
+            transform: translateX(0);
+
+            @include tablet {
+                transform: translateX(-50px); 
+                margin-top: 0;
+            }
+        }
+    }
+
+
+}
+.web1 {
+
+    border-bottom: 5px solid #7756D7;
+    
+    @include tablet {
+        border-bottom: none;
+    }
+}
+
+.web2 {
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    @include tablet {
+        background-color: #F4F5F5;
+    }
+
+   
+    .elementales {
+        text-transform: uppercase;
+        font-weight: $supernegrita;
+        margin-top: 2rem;
+        
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            justify-content: left;
+            margin: 0;
+        }
+
+        .elementalesT {
+            color: #7756D7;
+        }
+
+        .t {
+            text-transform: lowercase;
+            margin-left: 0.5rem;
+            
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0 10rem;
+        color: #7756D7;
+        font-weight: $negrita;
+
+        @include tablet {
+            text-align: left;
+            
+            margin: 0;
+        }
+    }
+
+    .descripcion {
+        font-weight: $delgada;
+        margin: 0 8rem;
+        margin-top: 2rem;
+        line-height: 2.6rem;
+        color: #7A7A7A;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    .btn {
+        margin-top: 3rem;
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: center;
+
+        @include tablet {
+            justify-content: left;
+        }
+    }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: $regular;
+        color: white;
+        border-radius: 2.9rem;
+        padding: 1.4rem 5rem;
+        background-color: #7756D7;
+        
+        
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.4rem;
+
+        @include tablet {
+            text-align: left;
+            font-size: 1.6rem;
+        }
+    }
+
+}
+
+.textoCambiante {
+    position: relative;
+    
+    width: 8rem;
+
+    @include tablet {
+        width: auto;
+    }
+    
+    .t {
+        position: absolute;
+        display: none;
+        animation: slide 0.5s ease;
+        margin: 0;
+        height: 100%;
+    }
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.textoCambiante .activeText.t {
+    display: flex;
+}
+
+.t1,.t2,.t3 {
+    display: flex;
+    align-items: center;
+}
+
+.t1 {
+    background: linear-gradient(to right ,#28c0cd,#6bd2d9);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.t2 {
+    background: linear-gradient(to right ,#f7614f,#fa4f8e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.t3 {
+    background: linear-gradient(to right ,#de0fc5,#ee1f87);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+

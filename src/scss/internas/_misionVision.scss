@@ -1,0 +1,80 @@
+.section4 {
+    background-color: #F4F5F5;
+
+    height: 100%;
+
+    @include tablet {
+        height: 405px;
+    }
+}
+
+.misionVision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    .mision,
+    .vision {
+        width: auto;
+        height: 100%;
+        padding: 1rem 2.5rem 4rem 2.5rem;
+        gap: 52rem;
+        margin: 2rem;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 1rem;
+        -webkit-box-shadow: 10px 10px 37px -18px rgba(0,0,0,0.55);
+        -moz-box-shadow: 10px 10px 37px -18px rgba(0,0,0,0.55);
+        box-shadow: 10px 10px 37px -18px rgba(0,0,0,0.55);
+
+        @include tablet {
+            width: 60.3rem;
+            height: 28.1rem;
+           
+        }
+
+        h3 {
+            margin-top: 3rem;
+            font-size: 2.2rem;
+            font-weight: $negrita;
+            color: #7756D7;
+
+            @include tablet {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            color: #7A7A7A;
+            line-height: 2.4rem;
+            font-size: 1.4rem;
+            font-weight: $delgada;
+            margin: 0;
+            
+            @include tablet {
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+            }
+        }
+    }
+    .mision {
+        margin-right: 2rem;
+
+        @include tablet {
+            margin-right: 2.5rem;
+        }
+    }
+    .vision {
+        margin-left: 2rem;
+
+        @include tablet {
+            margin-left: 2.5rem;
+        }
+    }
+}

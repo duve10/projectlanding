@@ -1,0 +1,99 @@
+
+.personas {
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+}
+
+.personas.contenedor {
+    width: 100%;
+
+    @include tablet {
+        width: 95%;
+    }
+}
+
+.person {
+    position: relative;
+    
+    img {
+        filter: grayscale(100%);
+    }
+
+    &:hover {
+        img {
+            filter: grayscale(0%);
+        }
+
+        .info-person {
+             background-image: linear-gradient(to top, rgba(0,0,0,0.8) 2%, transparent, transparent);
+        }
+    }
+    
+}
+
+.info-person {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8) 2%, transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+
+
+    h3 {
+        font-size: 1.8rem;
+        margin: 0;
+        text-align: left;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-weight: $mediana;
+        
+        @include tablet {
+            margin-left: 5rem;
+        }
+
+    }
+
+
+    p {
+        color: white;
+        margin: 0;
+        margin-left: 2rem;
+        font-size: 1.4rem;
+        font-weight: $delgada;
+        line-height: 2.6rem;
+
+        @include tablet {
+            margin-left: 5rem;
+        }
+    }
+
+    & p:last-child {
+        
+        margin-bottom: 1.5rem;
+        @include tablet {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+}
+
+
+.titulo {
+    color: #7756D7;
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: $mediana;
+    margin-top: 4.7rem;
+    margin-bottom: 4.7rem;
+}

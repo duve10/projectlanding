@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Pagina de diseño web, tal y como la deseen">
+    <title>Design Web</title>
+    <script src="https://kit.fontawesome.com/58d784c473.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header>
+        <div class="barra">
+
+            <div class="div-logo">
+                <a class="img-logo" href="/">
+                    <img loading="lazy" src="build/img/logo.webp" alt="logo">
+                </a>
+
+                <div class="hamburguer">
+                    <button class="button" id="boton" onclick="void(0)">
+                        
+                        <span class="top-line" onclick="void(0)"></span>
+                        <span class="middle-line" onclick="void(0)"></span>
+                        <span class="botton-line" onclick="void(0)"></span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <nav class="navegacion">
+                <a href="/">INICIO</a>
+                <a href="/nosotros.html">SERVICIOS</a>
+                <a href="/servicios.html">PRODUCTOS  <i class="fas fa-chevron-down"></i></a>
+                <a href="/contacto.html">CONTACTO</a>
+
+                <div class="info-menu">
+                    <div class="raya-menu"></div>
+                    <p>Contáctanos:</p>
+                    <p>(+51) 916 567 103</p>
+                    <div class="raya-menu"></div>
+                    <p>Escríbenos:</p>
+                    <p>dmsantamariaeirl@gmail.com</p>
+                    <div class="raya-menu"></div>
+
+                    <div class="wsp-menu">
+                        <a href="">Contáctanos</a>
+                    </div>
+                    
+
+                    <div class="iconos-menu">
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></i></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></i></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            
+
+        </div>
+    </header>
+
+
+    <section class="animar">
+        <h4>Si te animas a visitarnos</h4>
+        <p>Av. El Derby 055 Edif. Cronos, Torre 1, Piso 7</p>
+
+        <a href="https://goo.gl/maps/DY3Qfbos98wvmQXA9">
+            <img src="build/img/ubicacion.webp" alt="pin ubicacion"> 
+            <p>Llegar con Google Maps</p>
+        </a>
+    </section>
+
+    <section>
+        <main class="formulario-principal">
+            <h1>Comunícate con nosotros</h1>
+            <form class="formulario">
+                <p class="enviado">Enviado Correctamente</p>
+                <div class="datos">
+                    <div class="nombre">
+                        <label for="nombre">Tu nombre es:</label>
+                        <input type="text" placeholder="P.ej. Leonardo" id="nombre" name="nombre">
+                        <p class="error red">Ingresar un nombre correcto</p>
+                    </div>
+
+                    <div class="persona">
+                        <label for="persona">Razón Social</label>
+                        <input type="text" placeholder="Nombre de la Empresa" id="persona" name="persona">
+                        <p class="error red">Ingresa un dato correcto</p>
+                    </div>
+
+                    <div class="email">
+                        <label for="email">Tu correo electrónico es:</label>
+                        <input type="email" placeholder="P.ej. alguien@correo.com" formnovalidate  id="email" name="email">
+                        <p class="error red">Ingresar un correo correcto</p>
+                    </div>
+
+                    <div class="celular">
+                        <label for="celular">Tu teléfono celular es:</label>
+                        <input type="tel" placeholder="P.ej. 948357824" id="celular" name="celular"> 
+                        <p class="error red">Ingresar teléfono o celular correcto entre 7 a 14 números</p>
+                    </div>
+                </div>
+
+                <div class="mensajes">
+                    <div class="mensaje">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea  id="mensaje" name="mensaje" placeholder="Menciona tus consultas o dudas" ></textarea>
+                        <p class="error red">Ingresar mensaje correcto sin signos *,/,<,>,etc.</p>
+                    </div>
+
+                    <div class="check">
+                        <input class="checkInput" type="checkbox" id="check" name="check" >
+                            <label for="check" class="labelCheck">  
+                                <p>Verificación de confirmación de envío</p>  
+                            </label>
+                        <p class="error red checkError">Marcar las condiciones para continuar</p>    
+                        <p class="error red vacioError">Completar todos los campos</p>    
+                    </div>
+
+                    <div class="botonForm">
+
+                        <button class="btnForm" type="submit"> 
+                             <p>Enviar Datos</p>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="28.126" height="15.098" viewBox="0 0 28.126 15.098">
+                                <g id="Grupo_34" data-name="Grupo 34" transform="translate(1.25 1.761)">
+                                <line id="Línea_2" data-name="Línea 2" x1="24.468" transform="translate(0 6.076)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.5"/>
+                                    <g id="Grupo_33" data-name="Grupo 33" transform="translate(18.436)">
+                                        <path id="Trazado_7" data-name="Trazado 7" d="M0,.532,5.521,7.19,11.576,0" transform="translate(0 11.576) rotate(-90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        <!-- <input class="btnForm" type="submit" value="Enviar Datos"> -->
+                    </div>
+                </div>
+            </form>
+        </main>
+    </section>
+
+
+    <section class="ubicar">
+        <div class="ubicacion">
+            <div class="info-ubicacion">
+                <h2>Si te animas a visitarnos</h2>
+                <div class="ubi-raya"></div>
+                <div class="detalle-mapa">
+                    <div class="imagenUbi">
+                        <img loading="lazy" src="build/img/movil.webp" alt="imagen auto">
+                        <div class="mapa-info">
+                            <p>Telefóno:</p>
+                            <p>(+51) 916 567 103</p>
+                        </div>
+                        
+                    </div>
+                    <div class="imagenUbi">
+                        <img loading="lazy" src="build/img/correo.webp" alt="imagen bus">
+                        <div class="mapa-info">
+                            <p>Correo:</p>
+                            <p>dmsantamariaeirl@gmail.com</p>
+                        </div>
+                       
+                    </div>
+                    <div class="imagenUbi">
+                        <img loading="lazy" src="build/img/ubicacion.webp" alt="imagen persona">
+                        <div class="mapa-info">
+                            <p>Dirección</p>
+                            <p>Av. El Derby 055 Edif. Cronos, Torre 1, Piso 7</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.186002346987!2d-76.97220908505665!3d-12.099415546176708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7a6aab2ac75%3A0x4518df33c761be28!2sAv.%20El%20Derby%20055%2C%20Lima%2015023!5e0!3m2!1ses-419!2spe!4v1638250145928!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+        
+    <footer>
+        <div class="contenedor footerall">
+            <div class="footer1 ">
+
+                <div class="foot foot1">
+                    <ul>
+                        <div class="subTitulo">
+                            <h3>Contáctanos</h3>
+                            <div class="sumas1">
+                                <span class="parado"></span>
+                                <span class="echado"></span>
+                            </div>
+                        </div>
+                        <li>(+51) 916 567 103</li>
+                        <li>dmsantamariaeirl@gmail.com</li>
+                        <li>Av. El Derby 055 Edif. Cronos, Torre 1, Piso 7</li>
+                    </ul>
+                    <div class="linea"></div>
+                    <div class="iconos">
+                        <ul>
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></i></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></i></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="iconos2">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></i></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></i></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer2">
+                <p>Copyright © 2022 DM Santa María. | Todos los derechos reservados </p>
+            </div>
+        </div>
+        
+
+    </footer>
+    
+    <a href="https://api.whatsapp.com/send?phone=+51%20949%20284%20733&text=Estoy interesado" class="btn-wsp" target="_blank">
+
+        <i class="fab fa-whatsapp btn-wsp" title="Enviar mensaje de WhatsApp"></i>
+
+    </a> 
+
+    <script src="build/js/bundle.min.js"></script>
+</body>
+</html>

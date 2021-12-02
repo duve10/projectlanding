@@ -1,0 +1,319 @@
+.home {
+    min-height: 66.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.home .slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: none;
+    animation: fade1 1s ease;
+}
+
+.slide1 {
+    background-image: url(/build/img/slide1_mobil.webp);
+    @include tablet {
+        background-image: url(/build/img/slide1.webp);
+    }
+}
+
+.slide2 {
+    background-image: url(/build/img/slide2_mobil.webp);
+    @include tablet {
+        background-image: url(/build/img/slide2.webp);
+    }
+}
+
+.slide3 {
+    background-image: url(/build/img/slide3_mobil.webp);
+    @include tablet {
+        background-image: url(/build/img/slide3.webp);
+    }
+}
+
+.slide4 {
+    background-image: url(/build/img/slide4_mobil.webp);
+    @include tablet {
+        background-image: url(/build/img/slide4.webp);
+    }
+}
+
+.home .slide.active {
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container-slide {
+    max-width: 44.2rem;
+}
+
+.home .container-slide {
+    margin: 4rem auto auto auto;
+    flex-grow: 1;
+    @include tablet {
+        margin: auto auto auto 0;
+    }
+}
+
+.home .caption {
+    width: 100%;
+    max-width: 60rem;
+    height: auto;
+    margin-left: 0;
+    @include tablet {
+        margin-left: 8.7rem;
+    }
+    p {
+        text-align: center;
+        font-size: 3.5rem;
+        color: white;
+        width: 70%;
+        margin: 2.2rem auto;
+        font-weight: $negrita;
+        line-height: normal;
+        @include tablet {
+            text-align: initial;
+            font-size: 4.5rem;
+            margin: 2.5rem 0;
+            width: 100%;
+        }
+    }
+}
+
+// .home .slide.active .caption h1 {
+//     // opacity: 0;
+//     // animation: captionText .5s ease forwards;
+//     // animation-delay: 1s;
+// }
+.home .caption h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    width: 70%;
+    margin: 2.2rem auto;
+    font-weight: $negrita;
+    line-height: normal;
+    @include tablet {
+        text-align: initial;
+        font-size: 4.5rem;
+        margin: 2.5rem 0;
+        width: 100%;
+    }
+}
+
+// .home .slide.active .caption p {
+//     // opacity: 0;
+//     // animation: captionText .5s ease forwards;
+//     // animation-delay: 1.2s;
+// }
+.boton {
+    margin-top: 5rem;
+}
+
+.home .caption a {
+    // padding: 1.3rem 4.3rem;
+    width: 20.3rem;
+    height: 5.2rem;
+    background: transparent;
+    border-color: $blanco;
+    border: 2.5px solid;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 2.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    @include tablet {
+        margin-left: 0;
+    }
+    p {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: $regular;
+        color: white;
+        margin: auto;
+        transition: .5s;
+    }
+    svg {
+        position: absolute;
+        transition: .5s;
+        opacity: 0;
+        transform: translateX(14rem);
+    }
+    &:hover {
+        p {
+            transform: translateX(-2rem);
+        }
+        svg {
+            display: inline;
+            opacity: 1;
+            transform: translateX(14.5rem);
+        }
+    }
+}
+
+.home .caption .p1-caption,
+.home .caption .p2-caption {
+    font-size: 1.2rem;
+    font-weight: $superDelgada;
+    color: white;
+    text-align: center;
+    margin: 0 2rem;
+    @include tablet {
+        text-align: left;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+}
+
+.home .caption .p1-caption {
+    margin-top: 0;
+}
+
+.home .caption .p2-caption {
+    display: none;
+    @include tablet {
+        display: block;
+        max-width: 44.2rem;
+        line-height: 2.6rem;
+        margin-bottom: 4rem;
+    }
+}
+
+// .home .slide.active .caption a {
+//     // opacity: 0;
+//     // animation: captionText .5s ease forwards;
+//     // animation-delay: 1.4s;
+// }
+@keyframes captionText {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+.home .controls .prev,
+.home .controls .next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin-top: -2rem;
+    color: #ffffff;
+    background-color: #FF5722;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.home .controls .prev:hover,
+.home .controls .next:hover {
+    background-color: #000000;
+}
+
+.home .controls .prev {
+    left: 0;
+}
+
+.home .controls .next {
+    right: 0;
+}
+
+.home .indicator {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    bottom: 3rem;
+    z-index: 2;
+    transform: translateX(-50%);
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        top: 48%;
+        left: 96%;
+    }
+}
+
+.home .indicator div {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #ffffff;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    line-height: 20rem;
+    margin: 0 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        background-color: aqua;
+        border-color: aqua;
+    }
+    @include tablet {
+        margin: 0 0 2rem 0;
+    }
+}
+
+.home .indicator div.active {
+    background-color: aqua;
+    border-color: aqua;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/**OCULTAR FLECHAS*/
+
+.controls {
+    display: none;
+}
+
+.boton {
+    position: relative;
+    display: inline;
+}
+
+span {
+    height: 100%;
+    width: 100%;
+}
